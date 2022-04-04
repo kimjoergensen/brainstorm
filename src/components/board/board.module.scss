@@ -1,8 +1,42 @@
-@mixin player-board-side($background) {
+@mixin play-side($background) {
+  background: $background;
+  flex-flow: column nowrap;
   display: flex;
   flex: auto;
-  width: 100vw;
+}
+
+@mixin tile() {
+  margin: 1rem 0 1rem 0;
+  background: aliceblue;
+
+  &:not(:last-of-type) {
+    margin-right: 1rem;
+  }
+}
+
+@mixin field() {
+  justify-content: center;
+  display: flex;
+  flex: auto;
+  padding: 0 5vw;
+
+  .tile {
+    width: 20vw;
+    @include tile();
+  }
+}
+
+@mixin backrow($background) {
+  justify-content: center;
+  display: flex;
+  height: 20vh;
+  padding: 0 10vw;
   background: $background;
+
+  .tile {
+    width: 10vw;
+    @include tile();
+  }
 }
 
 .board {
@@ -12,16 +46,26 @@
   flex-flow: column nowrap;
 }
 
-.tile {
-  flex: auto;
-  margin: 1rem;
-  background: aliceblue;
-}
-
 .player {
-  @include player-board-side(blue);
+  @include play-side(blue);
+
+  > .backrow {
+    @include backrow(lightblue);
+  }
+
+  > .field {
+    @include field();
+  }
 }
 
 .opponent {
-  @include player-board-side(red);
+  @include play-side(coral);
+
+  > .backrow {
+    @include backrow(lightcoral);
+  }
+
+  > .field {
+    @include field();
+  }
 }
