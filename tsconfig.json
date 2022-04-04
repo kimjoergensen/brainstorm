@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "esModuleInterop": true,
     "isolatedModules": true,
     "sourceMap": true,
     "module": "commonjs",
@@ -7,6 +8,7 @@
     "jsx": "preserve"
   },
   "include": [
-    "src"
+    "src",
+    "declaration.d.ts"
   ]
 }
