@@ -1,5 +1,27 @@
+@mixin player-board-side($background) {
+  display: flex;
+  flex: auto;
+  width: 100vw;
+  background: $background;
+}
+
 .board {
   height: 100vh;
   width: 100vw;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.tile {
+  flex: auto;
+  margin: 1rem;
   background: aliceblue;
+}
+
+.player {
+  @include player-board-side(blue);
+}
+
+.opponent {
+  @include player-board-side(red);
 }
