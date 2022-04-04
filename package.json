@@ -1,0 +1,40 @@
+{
+  "name": "brainstorm",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Magic: The Gathering deckbuilder",
+  "keywords": [
+    "MTG",
+    "Magic",
+    "The",
+    "Gathering",
+    "deck",
+    "builder"
+  ],
+  "homepage": "https://github.com/kimjoergensen/brainstorm#readme",
+  "bugs": {
+    "url": "https://github.com/kimjoergensen/brainstorm/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kimjoergensen/brainstorm.git"
+  },
+  "license": "MIT",
+  "author": "Kim Brun Jørgensen",
+  "source": "public/index.html",
+  "scripts": {
+    "build": "parcel build",
+    "start": "parcel"
+  },
+  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "dependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^17.0.43",
+    "@types/react-dom": "^17.0.14",
+    "parcel": "^2.4.1",
+    "typescript": "^4.5.5"
+  }
+}
