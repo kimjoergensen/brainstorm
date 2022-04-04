@@ -1,11 +1,10 @@
 {
   "compilerOptions": {
-    "esModuleInterop": true,
     "isolatedModules": true,
     "sourceMap": true,
     "module": "commonjs",
     "target": "esnext",
-    "jsx": "react"
+    "jsx": "preserve"
   },
   "include": [
     "src"
